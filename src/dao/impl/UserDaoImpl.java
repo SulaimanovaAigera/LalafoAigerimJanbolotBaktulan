@@ -5,13 +5,9 @@ import db.DataBase;
 import exception.MyException;
 import models.User;
 
-import java.util.Iterator;
 import java.util.List;
-import java.util.Optional;
 
-public class UserDaoImpl implements UserDao {
-    private DataBase dataBase;
-    private Long userID=1L;
+public class UserDaoImpl  {
 
     public UserDaoImpl(DataBase dataBase) {
         this.dataBase = dataBase;
@@ -106,5 +102,5 @@ public class UserDaoImpl implements UserDao {
             System.out.println(myException.getMessage());
         }
         return null;
-    }
+
 }
