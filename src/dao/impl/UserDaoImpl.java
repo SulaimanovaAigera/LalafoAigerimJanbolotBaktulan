@@ -100,7 +100,7 @@ public class UserDaoImpl implements UserDao {
                     .filter(user -> user.getEmail().equals(userEmail))
                     .findFirst();
             if (first.isEmpty()){
-                throw new MyException("Not found user email");
+                throw new MyException("Not found user email, please provide included id");
             } else return first.get();
         }catch (MyException myException){
             System.out.println(myException.getMessage());
